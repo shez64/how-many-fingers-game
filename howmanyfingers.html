@@ -1,0 +1,110 @@
+<html>
+
+<head>
+
+
+<title>
+How Many Fingers?
+</title>
+
+
+
+<style>
+
+
+	body {
+	
+	background: black;
+	
+	}
+
+	#questionandbar {
+	
+		margin: 0 auto;
+		width: 330px;
+		border-bottom-right-radius: 20px;
+		border-bottom-left-radius: 20px;
+		background:white;
+		
+		
+		border: 4.5px solid white;
+		
+	
+					}
+	
+	p input {
+	
+		width: 265px;
+					}
+					
+					
+	#picture {
+	
+		width: 330px;
+		height: 260px;
+		background-image:url(fingers.jpg);
+		background-size: 100% 100%;
+		margin: 0 auto;
+		margin-top: 50px;
+		border-top-left-radius: 20px;
+		border-top-right-radius: 20px;
+		border: 4.5px solid white;
+	}
+	
+
+</style>
+
+
+</head>
+
+<body>
+
+
+<div id="picture">
+
+
+
+</div>
+
+<div id="questionandbar">
+
+	<p id="question"> <b>HOW MANY FINGERS AM I HOLDING UP? </b> </p>
+	
+	<p><input type="text" id="guess" placeholder="Enter a number between 1 and 5..."> <button id="check"> Guess </button> 
+	
+	</div>
+
+
+	<script type="text/javascript">
+
+	 document.getElementById("check").onclick = function() {
+	 
+	    var randnum = Math.random();
+		
+		randnum = randnum * 6;
+		
+		randnum = Math.floor(randnum);
+		
+		if (document.getElementById("guess").value == randnum) {
+		
+			alert("you got it!");
+			
+			
+		} else {
+		
+		alert("Nope the number was " + randnum); 
+		
+		}
+		
+		
+	}
+	
+	
+	
+
+	</script>
+
+</body>
+
+
+</html>
